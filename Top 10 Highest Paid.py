@@ -8,7 +8,7 @@ from pandas.core.frame import DataFrame
 df = pd.read_csv('nba_2016_2017_100.csv', header=0,)
 # Deleting empty spaces
 df = df.rename(columns=lambda x: x.strip())
-
+# Sorting by salary, descending
 df = df.sort_values(by= "SALARY_MILLIONS", ascending = False)
 
 df = df.head(10)
